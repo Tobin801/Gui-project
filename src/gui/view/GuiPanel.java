@@ -34,9 +34,15 @@ public class GuiPanel extends JPanel
 		this.add(firstTextField);
 	}
 	
+	/**
+	 * Helper method to hold ugly Gui layout Code.
+	 */
 	private void setupLayout()
 	{
-		
+		baseLayout.putConstraint(SpringLayout.WEST, firstButton, 134, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, firstButton, -70, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, firstTextField, 79, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.WEST, firstTextField, 159, SpringLayout.WEST, this);
 	}
 	
 	private void setupListeners()
